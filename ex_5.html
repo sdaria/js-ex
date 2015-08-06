@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Exercize_5</title>
+</head>
+<script>
+var n = Number(prompt("Enter number", ""));
+if (isNaN(n)){
+  document.write("Error");
+  function isEven(x)
+  {
+    if (x == 0) return true;
+    if (x == 1) return false;
+    return isEven(x-2 * (x > 0 ? 1 : -1));
+  }
+  document.write(isEven(n));
+  console.log(isEven(n));
+}
+</script>
+</html>

@@ -1,0 +1,19 @@
+<HTML>
+<HEAD>
+<TITLE>Exercize_1</TITLE>
+</HEAD>
+<SCRIPT>
+  var n = Number(prompt("Enter number", ""));
+  if (n < 0 || isNaN(n)) document.write("Error");
+  for (var i = 1; i <= n; i++)
+  {
+    var k = i;
+    while(k > 0)
+    {
+      document.writeln("#");
+      k--;
+    }
+    document.writeln("<br>");
+  }
+</SCRIPT>
+</HTML>

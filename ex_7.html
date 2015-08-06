@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Exercize_7</title>
+</head>
+<script>
+  var begin = Number(prompt("Beginnig of array", ""));
+  var end = Number(prompt("End of array", ""));
+  var step = Number(prompt("Step of arrary",""));
+  if (step == "") step = 1;
+  if (isNaN(begin) || isNaN(end) || isNaN(step)) document.write("Error");
+  function range(a, b, x)
+  {
+    var arr = new Array();
+    if (x > -1)
+      {
+        for (var i = a; i <= b; i+=x)
+            arr[i-a] = i;
+      }
+    else
+      {
+        var k = 0;
+        x = x * (-1);
+        for (var i = a; i >= b; i-=x)
+          {
+            arr[k] = i;
+            k++;
+          }
+      }
+    console.log(arr);
+    return arr;
+  }
+  function sum(a)
+  {
+    var s = 0;
+    for (var i = 0; i < a.length; i++)
+      s += a[i];
+    // console.log(s);
+    return s;
+  }
+  console.log(sum(range(begin, end, step)));
+</script>
+</html>
